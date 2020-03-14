@@ -1,0 +1,3 @@
+#!/bin/sh
+
+/usr/bin/dgit remote-helper $@
