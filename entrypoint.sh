@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -x
+
 # check values
 if [ -z "${DGIT_PRIVATE_KEY}" ]; then
     echo "error: not found DGIT_PRIVATE_KEY"
