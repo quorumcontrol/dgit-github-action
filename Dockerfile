@@ -9,7 +9,7 @@ LABEL "repository"="https://github.com/quorumcontrol/dgit-github-action"
 LABEL "homepage"="https://github.com/quorumcontrol/dgit-github-action"
 LABEL "maintainer"="dev@quorumcontrol.com"
 
-RUN apk --no-cache add openssl git curl openssh-client bash
+RUN apk --no-cache add git bash
 
 COPY dgit /usr/bin/dgit
 COPY git-remote-dgit /usr/bin/git-remote-dgit

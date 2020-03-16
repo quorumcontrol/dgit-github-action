@@ -1,9 +1,11 @@
-#!/bin/sh
+#!/bin/bash
 
 set -x
 
 echo "Current dir is"
 pwd
+
+ls -lha $(pwd)
 
 # check values
 if [ -z "${DGIT_PRIVATE_KEY}" ]; then
@@ -22,7 +24,5 @@ if [ -z "${DGIT_OBJ_STORAGE}" ]; then
 fi
 
 branch=$(git rev-parse --abbrev-ref HEAD)
-git config user.name "dgit publisher"
-git config user.email "actions@users.noreply.github.com"
 git remote add dgit $dgiturl
 git push dgit $branch:$branch
