@@ -2,6 +2,9 @@
 
 set -x
 
+echo "Current dir is"
+pwd
+
 # check values
 if [ -z "${DGIT_PRIVATE_KEY}" ]; then
     echo "error: not found DGIT_PRIVATE_KEY"
@@ -11,7 +14,7 @@ fi
 if [ -n "${DGIT_REPOSITORY}" ]; then
     dgiturl="dgit://${DGIT_REPOSITORY}"
 else
-    dgiturl="dgit://${GITHUB_REPOSITORY,,}"
+    dgiturl="dgit://${GITHUB_REPOSITORY}"
 fi
 
 if [ -z "${DGIT_OBJ_STORAGE}" ]; then
