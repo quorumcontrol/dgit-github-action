@@ -2,6 +2,8 @@
 
 A GitHub Action that pushes branches to `dgit`.  This is primarily used to sync up github repo to `dgit` on push or PR.
 
+You can learn more about [github actions](https://help.github.com/en/actions) here, but essentially they enable triggering configured actions based on events in a github workflow.  In this case we are using github actions to keep the dgit version of the repository up to date.  The "Actions" tab can be found right next to "Pull requests".
+
 Here is an example that forwards every push from GitHub to `dgit`:
 https://github.com/quorumcontrol/dgit/blob/master/.github/workflows/dgit-push.yml
 
