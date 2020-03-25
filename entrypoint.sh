@@ -17,5 +17,4 @@ fi
 
 branch=$(git rev-parse --abbrev-ref HEAD)
 git remote add dgit $dgiturl
-git fetch dgit $branch
 git push dgit $branch:$branch
