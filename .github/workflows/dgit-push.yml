@@ -7,6 +7,8 @@ jobs:
     steps:
     - name: Check out repository
       uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
     - name: Push to dgit
       uses: quorumcontrol/dgit-github-action@master
       env:
