@@ -12,5 +12,6 @@ jobs:
     - name: Push to dgit
       uses: quorumcontrol/dgit-github-action@master
       env:
+        GIT_PUSH_ARGS: "--force"
         DGIT_PRIVATE_KEY: ${{ secrets.DGIT_PRIVATE_KEY }}
         DGIT_LOG_LEVEL: debug
